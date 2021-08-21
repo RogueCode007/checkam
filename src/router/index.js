@@ -17,15 +17,17 @@ const routes = [
     children: [
       {
         path: '/app/dashboard',
-        redirect: '/app/dashboard/home',
+        redirect: '/app/dashboard/payment',
         component: () => import('../views/Menu/Menu'),
         children: [
           {
             path: '/app/dashboard/home',
+            name: 'Menu',
             component: () => import('../views/Menu/Home')
           },
           {
             path: '/app/dashboard/payment',
+            name: 'Payment',
             component: () => import('../views/Menu/Payment')
           },
         ]

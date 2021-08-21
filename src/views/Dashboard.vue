@@ -4,7 +4,7 @@
       <div class="l-modal block lg:hidden" v-if="$store.state.showMobileNav">
         <MobileNav />
       </div>
-      <div class="hidden lg:block w-full border-solid border-red-500 border">
+      <div class="hidden lg:block w-full border-r border-solid border-gray-200" style="box-shadow: inset -1px 0px 0px #E3E8EE">
         <TheSidebar />
       </div>
       <div class="p-3 flex justify-between lg:hidden">
@@ -14,7 +14,7 @@
         </svg>
       </div>
       <div class="w-full overflow-x-hidden">
-        <div class="px-3">
+        <div class="">
           <main class="bg-white">
             <router-view :key="$route.path"></router-view>
           </main>
