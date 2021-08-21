@@ -4,7 +4,7 @@
       <div class="l-modal block lg:hidden" v-if="$store.state.showMobileNav">
         <MobileNav />
       </div>
-      <div class="hidden lg:block w-full border-r border-solid border-gray-200" style="box-shadow: inset -1px 0px 0px #E3E8EE">
+      <div class="aside hidden lg:block w-full border-r border-solid border-gray-200" style="box-shadow: inset -1px 0px 0px #E3E8EE">
         <TheSidebar />
       </div>
       <div class="p-3 flex justify-between lg:hidden">
@@ -47,6 +47,7 @@ export default {
     min-height: 100vh;
     width: 100%;
   }
+ 
 }
 
 </style>

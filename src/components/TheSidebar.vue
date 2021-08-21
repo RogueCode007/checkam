@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #F7FAFC; height: 100%">
+  <div style="background-color: #F7FAFC; height: 100%; position: fixed; width: 200px">
     <ul class="" style="height: 100%">
       <li class="pl-3 py-3">
         <div class="flex items-center">
