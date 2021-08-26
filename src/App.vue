@@ -31,5 +31,15 @@ export default {
 .loading-modal{
   min-height: 350px; 
 }
+.card-color{
+  color: #525f7f;
+}
+.card-label{
+  color: #9a9a9a;
+  // card price or number is white
+}
+.body-bg{
+  color: #1e1e2f
+}
 
 </style>

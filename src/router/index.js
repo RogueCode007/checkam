@@ -17,7 +17,7 @@ const routes = [
     children: [
       {
         path: '/app/dashboard',
-        redirect: '/app/dashboard/payment',
+        redirect: '/app/dashboard/home',
         component: () => import('../views/Menu/Menu'),
         children: [
           {
@@ -26,9 +26,9 @@ const routes = [
             component: () => import('../views/Menu/Home')
           },
           {
-            path: '/app/dashboard/payment',
-            name: 'Payment',
-            component: () => import('../views/Menu/Payment')
+            path: '/app/dashboard/addclaim',
+            name: 'AddClaim',
+            component: () => import('../views/Menu/AddClaim')
           },
         ]
       }

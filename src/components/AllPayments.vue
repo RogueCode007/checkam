@@ -89,7 +89,7 @@ export default {
       ]
     }
   },
-  creates(){
+  created(){
     this.picked == 'all'
   }
 

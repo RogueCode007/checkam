@@ -1,6 +1,6 @@
 <template>
-  <div style="background-color: #F7FAFC; height:100%; width: 80%" class="">
-    <ul class="relative" style="height: 100%">
+  <div style="background-color: #27293d; height:100%; width: 80%" class="">
+    <ul class="relative text-white" style="height: 100%">
       <font-awesome-icon icon="times" class="text-2xl absolute text-gray-500" style="top: 10px; right: 15px" @click="$store.commit('showMobileNav', false)" />
       <li class="pl-3 py-3">
         <div class="flex items-center">
