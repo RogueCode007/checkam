@@ -1,6 +1,7 @@
 <template>
   <div class="py-4 lg:py-6 px-3 lg:px-6">
-    <div class="px-4 py-6 rounded cardbg" style="min-height: 100vh">
+    <h1 class="text-white mb-2 font-bold text-2xl lg:text-3xl">Add a new claim</h1>
+    <div class="px-4 py-6 rounded cardbg relative" style="min-height: 100vh">
       <div class="lg:flex lg:gap-10">
         <div class="lg:w-full">
           <label>Customer Name</label>
@@ -76,12 +77,7 @@
         </div>
       </div>
       <div class="lg:mt-4 lg:flex lg:gap-10 lg:items-start">
-        <div class="mt-4 lg:mt-0 lg:w-full">
-          <label>Summary/description of claim</label>
-          <div class="rounded inputbox px-1">
-            <textarea cols="30" rows="5" class="block w-full focus:outline-none py-1 px-1"></textarea>
-          </div>
-        </div>
+        
         <div class="mt-4 lg:mt-0 lg:w-full">
           <label>Witness Name</label>
           <div class="rounded inputbox px-1">
@@ -94,7 +90,22 @@
             <input type="text" class="block w-full focus:outline-none py-1 px-1">
           </div>
         </div>
+        <div class="mt-4 lg:mt-0 lg:w-full">
+          <label>Witness Email address</label>
+          <div class="rounded inputbox px-1">
+            <input type="text" class="block w-full focus:outline-none py-1 px-1">
+          </div>
+        </div>
       </div>
+      <div class="lg:mt-4 lg:flex lg:items-start">
+        <div class="mt-4 lg:mt-0 ">
+          <label>Summary/description of claim</label>
+          <div class="rounded inputbox px-1">
+            <textarea cols="35" rows="5" class="block w-full focus:outline-none py-1 px-1"></textarea>
+          </div>
+        </div>
+      </div>
+      <button class="absolute focus:outline-none px-4 py-2 rounded">Submit</button>
     </div>
   </div>
 </template>
@@ -118,9 +129,18 @@ export default {
 input, select, textarea{
   background-color: #27293d;
 }
-input:focus{
-  background-color: #1d253b;
+input::placeholder{
   color: #344675;
 }
-
+input:focus{
+  background-color: #1d253b;
+  color: white
+}
+button{
+  background-image: linear-gradient(to bottom left,#e14eca,#ba54f5,#e14eca);
+  background-color: #e14eca;
+  color: white;
+  bottom: 20px;
+  right: 20px
+}
 </style>

@@ -1,18 +1,19 @@
 <template>
 <div>
-  <div class="flex gap-4" style="color: #697386">
+  <div class="flex gap-4" style="color: #fff">
     <p @click="picked = 'all'" class="cursor-pointer" :class="[picked === 'all' ? 'border-b border-solid border-blue-500 text-blue-500': '']">All</p>
     <p @click="picked = 'succeeded'" class="cursor-pointer" :class="[picked === 'succeeded' ? 'border-b border-solid border-blue-500 text-blue-500': '']">Succeeded</p>
     <p @click="picked = 'refunded'" class="cursor-pointer" :class="[picked === 'refunded' ? 'border-b border-solid border-blue-500 text-blue-500': '']">Refunded</p>
     <p @click="picked = 'uncaptured'" class="cursor-pointer" :class="[picked === 'uncaptured' ? 'border-b border-solid border-blue-500 text-blue-500': '']">Uncaptured</p>
   </div>
-  <div class="overflow-x-auto">
+  <div class="overflow-x-auto text-white">
     <table>
       <tr>
         <th><input type="checkbox"></th>
         <th>Amount</th>
         <th>Description</th>
-        <th>Customers</th>
+        <th>Name</th>
+        <th>Email</th>
         <th>Date</th>
       </tr>
       <tr v-for="payment in payments" :key="payment.id">
@@ -40,11 +41,14 @@
             </div>
           </div>
         </td>
-        <td class="text-sm" style="color: #4F566B; width: 45%">
+        <td class="text-sm" style="color: #fff; width: 45%">
           {{payment.description}}
         </td>
-        <td class="text-sm" style="color: #4F566B;">
-          {{payment.customer}}
+        <td class="text-sm" style="width: 10%">
+          {{payment.name}}
+        </td>
+        <td class="text-sm" style="color: #fff;">
+          {{payment.email}}
         </td>
         <td class="text-sm">
           {{payment.date}}
@@ -72,20 +76,20 @@ export default {
     return {
       picked: 'all',
       payments: [
-        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'refund', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'failed', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'refund', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'failed', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'failed', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'refund', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
-        {amount: 'US$500', status: 'failed', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', customer: 'xyz@gmail.com', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'refund', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'failed', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'refund', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'failed', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'failed', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'success', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'refund', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
+        {amount: 'US$500', status: 'failed', description: 'fe3d8216-58f9-4dc1-aaef-2f19463b5258', email: 'xyz@gmail.com', name: 'John Doe', date: '7 Jul, 14:04'},
       ]
     }
   },
