@@ -35,6 +35,11 @@ const routes = [
             name: 'ViewClaims',
             component: () => import('../views/Menu/ViewClaims')
           },
+          {
+            path: '/app/dashboard/claim/:id',
+            name: 'ViewClaim',
+            component: () => import('../views/Menu/ViewClaim')
+          },
         ]
       }
     ]
