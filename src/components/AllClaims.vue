@@ -106,13 +106,13 @@ table{
 }
 th{
   text-align: left;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid rgb(155, 155, 155);
   padding: 10px;
 }
 td{
   padding: 8px
 }
 th, td{
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgb(155, 155, 155);
 }
 </style>

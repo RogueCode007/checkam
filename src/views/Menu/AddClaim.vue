@@ -132,7 +132,7 @@ input, select, textarea{
 input::placeholder{
   color: #344675;
 }
-input:focus{
+input:focus, textarea:focus{
   background-color: #1d253b;
   color: white
 }
